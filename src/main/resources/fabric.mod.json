@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "ws_connect",
+  "version": "${version}",
+  "name": "wsConnect",
+  "description": "Fabric mod that enables minecraft server and client to connect via webSocket",
+  "authors": [
+    "DWVoid", "NEWorldMC Team"
+  ],
+  "contact": {
+    "homepage": "https://www.newinfinideas.cn/",
+    "issues": "https://github.com/neworldmc/wsConnect/issues",
+    "sources": "https://github.com/neworldmc/wsConnect"
+  },
+  "license": "GNU Affero General Public License v3.0 (AGPLv3)",
+  "icon": "assets/ws_connect/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "cn.newinfinideas.nwmc.wsconnect.Main"
+      }
+    ]
+  },
+  "mixins": [
+    "ws_connect.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.7",
+    "fabric": "*",
+    "fabric-language-kotlin": ">=1.6.5+kotlin.1.5.31",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  }
+}
